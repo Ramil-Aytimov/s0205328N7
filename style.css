@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #172033;
+    background: #f3f6fb;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.site-header,
+.site-footer {
+    color: #ffffff;
+    background: #245b87;
+}
+
+.site-header h1 {
+    margin: 0 0 6px;
+    font-size: 1.8rem;
+}
+
+.site-header p,
+.site-footer p {
+    margin: 0;
+}
+
+.site-header p {
+    color: #e4edf7;
+}
+
+main {
+    flex: 1;
+}
+
+.gallery {
+    max-width: 1000px;
+    margin: 28px auto;
+}
+
+.gallery-window {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.gallery-track {
+    display: flex;
+    gap: 16px;
+    transition: transform 350ms ease;
+}
+
+.gallery-slide {
+    flex: 0 0 calc((100% - 32px) / 3);
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    border-radius: 12px;
+    background: #dbe4ef;
+}
+
+.gallery-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 18px;
+}
+
+.arrow-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    border: 0;
+    border-radius: 50%;
+    color: #ffffff;
+    background: #245b87;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.arrow-button:hover:not(:disabled) {
+    background: #163d5d;
+}
+
+.arrow-button:focus-visible {
+    outline: 3px solid #e2a83b;
+    outline-offset: 3px;
+}
+
+.arrow-button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+.pager {
+    min-width: 64px;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+.site-footer {
+    margin-top: auto;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 16px;
+    }
+
+    .site-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .gallery {
+        margin: 20px auto;
+    }
+
+    .gallery-track {
+        gap: 0;
+    }
+
+    .gallery-slide {
+        flex-basis: 100%;
+    }
+
+    .gallery-controls {
+        gap: 20px;
+    }
+
+    .arrow-button {
+        width: 42px;
+        height: 42px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gallery-track {
+        transition: none;
+    }
+}
