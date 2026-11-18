@@ -21,8 +21,7 @@ body {
     padding: 20px;
 }
 
-.site-header,
-.site-footer {
+.site-header{
     color: #ffffff;
     background: #245b87;
 }
@@ -32,8 +31,7 @@ body {
     font-size: 1.8rem;
 }
 
-.site-header p,
-.site-footer p {
+.site-header p {
     margin: 0;
 }
 
@@ -123,10 +121,6 @@ main {
     font-variant-numeric: tabular-nums;
 }
 
-.site-footer {
-    margin-top: auto;
-    text-align: center;
-}
 
 @media (max-width: 600px) {
     .container {
